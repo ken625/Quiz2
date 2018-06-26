@@ -12,6 +12,9 @@ import model.NewAccount;
 
 public class AccountDAO {
 
+	private String str = "?useUnicode=true&useJDBCCompliantTimezoneShift="
+			+ "true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+
 	//ACCOUNT内のレコードを探索
 	public Account findByLogin(Login login){
 		Connection conn = null;
@@ -20,7 +23,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test_schema");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test_schema" + str, "root", "root");
 
 			//データの取得(SELECT)
 			String sql = "SELECT USER_NAME, PASS, SCORE FROM ACCOUNT WHERE USER_NAME = ? AND PASS = ?";
@@ -64,7 +67,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test_schema?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test_schema" + str, "root", "root");
 
 			//レコード追加用のSQL文(INSERT)
 			String sql = "INSERT INTO ACCOUNT(USER_NAME, PASS) VALUES(?, ?)";
