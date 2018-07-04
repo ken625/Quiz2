@@ -12,7 +12,7 @@ import model.NewAccount;
 
 public class AccountDAO {
 
-	private String str = "?useUnicode=true&useJDBCCompliantTimezoneShift="
+	private final String STR = "?useUnicode=true&useJDBCCompliantTimezoneShift="
 			+ "true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
 	//ACCOUNT内のレコードを探索
@@ -23,7 +23,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test_schema" + str, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test_schema" + STR, "root", "root");
 
 			//データの取得(SELECT)
 			String sql = "SELECT USER_NAME, PASS, SCORE FROM ACCOUNT WHERE USER_NAME = ? AND PASS = ?";
@@ -67,7 +67,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test_schema" + str, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test_schema" + STR, "root", "root");
 
 			//レコード追加用のSQL文(INSERT)
 			String sql = "INSERT INTO ACCOUNT(USER_NAME, PASS) VALUES(?, ?)";
@@ -100,5 +100,42 @@ public class AccountDAO {
 			}
 		}
 		return true;
+	}
+
+	//スコアの更新
+	public void updateScore(Account account, int score) {
+		Connection conn = null;
+		String s = String.valueOf(score);
+
+		//データベースに接続
+		try{
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test_schema" + STR, "root", "root");
+
+			//レコード追加用のSQL文(INSERT)
+			String sql = "UPDATE ACCOUNT SET SCORE = " + s + "WHERE ";
+			//SQLの送信
+			PreparedStatement pSmt = conn.prepareStatement(sql);
+			//レコード追加用のSQL文(INSERT)
+			pSmt.setString(1, newAccount.getUserName());
+			pSmt.setString(2, newAccount.getPass());
+			//INSERT文を実行する
+			int result = pSmt.executeUpdate();
+
+
+		}catch(SQLException e){
+			e.printStackTrace();
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+		}finally{
+			if(conn != null){
+				try{
+					conn.close();
+				}catch(SQLException e){
+				e.printStackTrace();
+				}
+			}
+		}
+
 	}
 }

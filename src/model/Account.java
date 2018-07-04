@@ -23,7 +23,6 @@ public class Account {
 	}
 
 
-
 	public String getUserName(){return userName;}
 	public String getPass(){return pass;}
 	public int getScore(){return score;}

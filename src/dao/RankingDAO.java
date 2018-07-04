@@ -11,7 +11,7 @@ import java.util.List;
 import model.Account;
 
 public class RankingDAO {
-	private String str = "?useUnicode=true&useJDBCCompliantTimezoneShift="
+	private final String STR = "?useUnicode=true&useJDBCCompliantTimezoneShift="
 			+ "true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
 	public List<Account> ranking() {
@@ -22,10 +22,11 @@ public class RankingDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test_schema" + str, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test_schema" + STR, "root", "root");
 
 			//データの取得(SELECT)
-			String sql = "SELECT USER_NAME, SCORE, RANK() OVER (ORDER BY SCORE DESC) AS RANKING FROM ACCOUNT";
+			String sql = "SELECT USER_NAME, SCORE, RANK() OVER (ORDER BY SCORE DESC) AS RANKING FROM ACCOUNT "
+					+ "WHERE SCORE IS NOT NULL";
 			//SQLの送信
 			PreparedStatement pSmt = conn.prepareStatement(sql);
 
