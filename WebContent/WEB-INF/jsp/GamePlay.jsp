@@ -22,7 +22,7 @@
 </div>
 <p id="end"></p>
 <button type="button" id="nextbtn" class="off" style="display:none;">次へ</button>
-<button type="button" id="resultbtn" class="off" style="display:none" onclick="location.href='/Quiz/ResultServlet'">結果画面へ</button>
+<button type="button" id="resultbtn" class="off" style="display:none" onclick="location.href='/Quiz2/ResultServlet'">結果画面へ</button>
 <script>
 window.onload = function(){
 
@@ -77,7 +77,7 @@ window.onload = function(){
 				question.textContent = JSON.parse(req.response);
 			}
 		}
-		req.open("GET","/Quiz/GameServlet?action=getData&questionNum="+questionNum);
+		req.open("GET","/Quiz2/GameServlet?action=getData&questionNum="+questionNum);
 		req.setRequestHeader('Content-Type', 'application/x-www-form-urlencorded');
 		req.send(null);
 	}
@@ -101,7 +101,7 @@ window.onload = function(){
 			}
 		}
 		console.log(questionNum);
-		req.open("GET","/Quiz/CheckAnswerServlet?answer="+this.value + "&questionNum="+questionNum);
+		req.open("GET","/Quiz2/CheckAnswerServlet?answer="+this.value + "&questionNum="+questionNum);
 		req.setRequestHeader('Content-Type', 'application/x-www-form-urlencorded');
 		req.send(null);
 	}

@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/index.jsp");
 			dispatcher.forward(request, response);
 		}else{
-			response.sendRedirect("/Quiz/LoginServlet");
+			response.sendRedirect("/Quiz2/LoginServlet");
 		}
 	}
 }

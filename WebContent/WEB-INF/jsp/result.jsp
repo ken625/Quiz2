@@ -25,6 +25,6 @@
 	</tr>
 <%} %>
 </table>
-<button type="button" onclick="location.href='/Quiz/ToIndexServlet'">トップへ</button>
+<button type="button" onclick="location.href='/Quiz2/ToIndexServlet'">トップへ</button>
 </body>
 </html>
