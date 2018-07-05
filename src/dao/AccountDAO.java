@@ -23,7 +23,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test_schema" + STR, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test" + STR, "root", "root");
 
 			//データの取得(SELECT)
 			String sql = "SELECT USER_NAME, PASS, SCORE FROM ACCOUNT WHERE USER_NAME = ? AND PASS = ?";
@@ -67,7 +67,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test_schema" + STR, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test" + STR, "root", "root");
 
 			//レコード追加用のSQL文(INSERT)
 			String sql = "INSERT INTO ACCOUNT(USER_NAME, PASS) VALUES(?, ?)";
@@ -109,7 +109,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test_schema" + STR, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test" + STR, "root", "root");
 
 			//レコード追加用のSQL文(INSERT)
 			String sql = "UPDATE ACCOUNT SET SCORE = ? WHERE USER_NAME = ?";

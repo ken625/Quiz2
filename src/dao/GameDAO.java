@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import model.GameData;
 
 public class GameDAO {
+	private final String STR = "?useUnicode=true&useJDBCCompliantTimezoneShift="
+			+ "true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	//QUIZテーブルのデータを取得
 	public ArrayList<ArrayList<GameData>> quizList(){
 		Connection conn = null;
@@ -21,8 +23,8 @@ public class GameDAO {
 
 		//データベースに接続
 		try{
-			Class.forName("org.h2.Driver");
-			conn = DriverManager.getConnection("jdbc:h2:~/test","sa","");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test" + STR, "root", "root");
 
 			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			String sql = "SELECT * FROM QUIZ";

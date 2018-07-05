@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Account;
 import model.Login;
 import model.LoginLogic;
 
@@ -30,16 +31,16 @@ public class LoginServlet extends HttpServlet {
 
 		Login login = new Login(userName, pass);
 		LoginLogic bo = new LoginLogic();
-		boolean result = bo.execute(login);
+		Account account = bo.execute(login);
 
-		if(result){
+		if(account != null){
 			HttpSession session = request.getSession();
-			session.setAttribute("userName", userName);
+			session.setAttribute("account", account);
 
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/index.jsp");
 			dispatcher.forward(request, response);
 		}else{
-			response.sendRedirect("/Quiz2/LoginServlet");
+			response.sendRedirect("/Quiz/LoginServlet");
 		}
 	}
 }
