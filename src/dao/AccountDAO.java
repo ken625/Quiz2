@@ -103,9 +103,8 @@ public class AccountDAO {
 	}
 
 	//スコアの更新
-	public void updateScore(Account account, int score) {
+	public boolean update(String userName, int score){
 		Connection conn = null;
-		String s = String.valueOf(score);
 
 		//データベースに接続
 		try{
@@ -113,29 +112,35 @@ public class AccountDAO {
 			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test_schema" + STR, "root", "root");
 
 			//レコード追加用のSQL文(INSERT)
-			String sql = "UPDATE ACCOUNT SET SCORE = " + s + "WHERE ";
+			String sql = "UPDATE ACCOUNT SET SCORE = ? WHERE USER_NAME = ?";
 			//SQLの送信
 			PreparedStatement pSmt = conn.prepareStatement(sql);
 			//レコード追加用のSQL文(INSERT)
-			pSmt.setString(1, newAccount.getUserName());
-			pSmt.setString(2, newAccount.getPass());
+			pSmt.setInt(1, score);
+			pSmt.setString(2, userName);
 			//INSERT文を実行する
 			int result = pSmt.executeUpdate();
 
+			if(result != 1){
+				return false;
+			}
 
 		}catch(SQLException e){
 			e.printStackTrace();
+			return false;
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
+			return false;
 		}finally{
 			if(conn != null){
 				try{
 					conn.close();
 				}catch(SQLException e){
 				e.printStackTrace();
+				return false;
 				}
 			}
 		}
-
+		return true;
 	}
 }

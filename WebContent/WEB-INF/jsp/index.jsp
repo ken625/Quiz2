@@ -7,13 +7,12 @@
 <title>トップページ</title>
 </head>
 <body>
-<p><c:out value="${userName}" />さん</p>
-<a href="/Quiz2/LoginServlet">ログアウト</a>
+<jsp:include page="/WEB-INF/jsp/header.jsp"/>
 <h1>ゲームタイトル</h1>
 <p>説明</p>
 <form>
 <input type="button" value="ゲームスタート" onclick="location.href='/Quiz2/GameServlet'">
-<input type="button" value="ランキング">
+<input type="button" value="ランキング" onclick="location.href='/Quiz2/RankingServlet'">
 </form>
 </body>
 </html>
