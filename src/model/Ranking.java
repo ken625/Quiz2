@@ -1,5 +1,5 @@
 package model;
-
+/*
 public class Ranking {
 	private String userName;
 	private int score;
@@ -22,3 +22,4 @@ public class Ranking {
 		return ranking;
 	}
 }
+*/

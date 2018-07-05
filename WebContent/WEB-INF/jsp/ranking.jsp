@@ -28,6 +28,8 @@ List<Account> rankingList = (List<Account>) request.getAttribute("rankingList");
 			</tr>
 		<% } %>
 	</table>
-
+	<div id="ranking">
+		<p>あなたの順位は</p>
+	</div>
 </body>
 </html>
