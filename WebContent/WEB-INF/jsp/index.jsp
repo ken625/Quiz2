@@ -11,7 +11,7 @@
 <h1>ゲームタイトル</h1>
 <p>説明</p>
 <form>
-<input type="button" value="ゲームスタート" onclick="location.href='/Quiz2/GameServlet'">
+<input type="button" value="ゲームスタート" onclick="location.href='/Quiz2/GameServlet?action=start'">
 <input type="button" value="ランキング" onclick="location.href='/Quiz2/RankingServlet'">
 </form>
 </body>

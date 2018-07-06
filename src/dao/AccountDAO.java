@@ -22,7 +22,7 @@ public class AccountDAO {
 
 		//データベースに接続
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test" + STR, "root", "root");
 
 			//データの取得(SELECT)
