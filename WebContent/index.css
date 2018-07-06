@@ -1,0 +1,151 @@
+body {
+    background: #2c3338;
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+p {
+    text-align: center;
+}
+
+ul {
+    background-color: #9ec34b;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+}
+
+ul li {
+    display: inline-block;
+    width: 7em;
+    padding: 9px;
+    margin: 0px;
+    background-color: #9ec34b;
+    float: right;
+    text-align: center;
+}
+
+#logout {}
+
+#logout::before,
+#logout::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: '';
+}
+
+#logout,
+#logout::before,
+#logout::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+#logout {
+    border-right: 3px solid #FFF;
+    border-left: 1px solid #FFF;
+}
+
+#logout:hover {
+    background-color: #fff;
+    border-color: #FFF;
+    color: #59b1eb;
+}
+
+#name {}
+
+#name::before,
+#name::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: '';
+}
+
+#name,
+#name::before,
+#name::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+#name {
+    border-right: 2px solid #FFF;
+    border-left: 3px solid #FFF;
+}
+
+#name:hover {
+    background-color: #fff;
+    border-color: #FFF;
+    color: #59b1eb;
+}
+
+#count {
+    font-size: 2em;
+    color: #FFF;
+    background: transparent;
+    border-left: solid 5px #2093fc;
+    text-align: left;
+}
+
+#level {
+    font-size: 1.5em;
+    color: #FFF;
+    background: transparent;
+    text-align: left;
+}
+#question {
+    margin: 0em 20em 0em 20em;
+    color: #FFF;
+    position: relative;
+    padding: 1em 1em;
+    border-top: solid 2px #9ec34b;
+    border-bottom: solid 2px #9ec34b;
+}
+
+#question:before,
+#question:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: #9ec34b;
+}
+
+#question:before {
+    left: 10px;
+}
+
+#question:after {
+    right: 10px;
+}
+
+.main {
+    text-align: center
+}
+
+.button input {
+    margin: 5px;
+    padding: 2px 37px;
+    font-size: 7em;
+}
+
+#maru input{
+    background-color: #FE2E9A;
+    color: #FFF;
+}
+
+#batsu input{
+    background-color: #0677de;
+    color: #FFF;
+}

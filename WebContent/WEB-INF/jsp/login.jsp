@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet"  href="${pageContext.request.contextPath}/stylesheet.css">
+<link rel="stylesheet"  href="${pageContext.request.contextPath}/default.css">
 <meta charset="UTF-8">
 <title>ログイン</title>
 </head>
