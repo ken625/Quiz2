@@ -24,7 +24,10 @@ public class RankingLogic {
 	}
 
 	public int myRanking(String userName) {
+		System.out.println("myRankingが実行されまし");
 		for(Account account : list){
+			System.out.println(userName);
+			System.out.println(account.getUserName());
 			if(account.getUserName().equals(userName)){
 				int ranking = account.getRanking();
 				return ranking;
