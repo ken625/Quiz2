@@ -30,7 +30,7 @@ public class RankingServlet extends HttpServlet {
 		int myRanking = rankingLogic.myRanking(userName);
 
 		request.setAttribute("rankingList", rankingList);
-		request.setAttribute("myRaking", myRanking);
+		request.setAttribute("myRanking", myRanking);
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/ranking.jsp");
 		dispatcher.forward(request, response);

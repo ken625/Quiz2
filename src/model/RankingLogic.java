@@ -14,7 +14,7 @@ public class RankingLogic {
 	public List<Account> topRanking() {
 		List<Account> topList = new ArrayList<Account>();
 		for(int i = 0; i < list.size(); i++) {
-			if(iterator.hasNext() && i <= 10) {
+			if(iterator.hasNext() && i < 10) {
 				topList.add(list.get(i));
 			} else {
 				return topList;
@@ -26,8 +26,8 @@ public class RankingLogic {
 	public int myRanking(String userName) {
 		for(Account account : list){
 			if(account.getUserName().equals(userName)){
-				account.getRanking();
-				return account.getRanking();
+				int ranking = account.getRanking();
+				return ranking;
 			}
 		}
 		return 0;

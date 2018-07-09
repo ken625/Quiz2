@@ -5,7 +5,7 @@
 <%
 Account account = (Account) session.getAttribute("account");
 List<Account> rankingList = (List<Account>) request.getAttribute("rankingList");
-
+int myRanking = (int) request.getAttribute("myRanking");
 %>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,16 @@ List<Account> rankingList = (List<Account>) request.getAttribute("rankingList");
 		<% } %>
 	</table>
 	<div id="ranking">
-		<p>あなたの順位は</p>
+		<p>
+			<% if(myRanking == 0) {%>
+			ランキングに登録されていません
+			<% } else { %>
+			あなたの順位は<%= myRanking %>です
+			<% } %>
+		</p>
+	</div>
+	<div>
+		<button type="button" onclick="location.href='/Quiz2/ToIndexServlet'">トップへ</button>
 	</div>
 </body>
 </html>
