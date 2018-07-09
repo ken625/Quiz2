@@ -149,3 +149,33 @@ ul li {
     background-color: #0677de;
     color: #FFF;
 }
+.pochi{
+    padding: 0.3em 1em;
+    text-decoration: n display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: double 4px #67c5ff;
+    border-radius: 3px;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+}
+@keyframes RightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    animation-duration: 3s;
+    animation-name: RightToLeft;
+}
+

@@ -11,8 +11,10 @@
 <title>結果画面</title>
 </head>
 <body>
-<jsp:include page="/WEB-INF/jsp/header.jsp"/>
-<p>あなたのスコアは${score}点でした。</p>
+    <ul>
+        <li class="button hvr-sweep-to-right"> ${account.userName}さん</li>
+        <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet"></a>ログアウト</li>
+    </ul><p>あなたのスコアは${score}点でした。</p>
 <table border="1">
 <% for(int i = 0; i < 10; i++){%>
 	<tr>

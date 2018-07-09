@@ -9,7 +9,11 @@
 <title>ゲーム画面</title>
 </head>
 <body>
-<jsp:include page="/WEB-INF/jsp/header.jsp"/>
+    <ul>
+        <li class="button hvr-sweep-to-right"> ${account.userName}さん</li>
+        <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet"></a>ログアウト</li>
+    </ul>
+
 <p>Q<span id="span">1</span>/10</p>
 <p id="star"></p>
 <p id="question"></p>
