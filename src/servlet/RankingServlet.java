@@ -26,7 +26,8 @@ public class RankingServlet extends HttpServlet {
 		RankingLogic rankingLogic = new RankingLogic();
 		List<Account> rankingList = rankingLogic.topRanking();
 
-		String userName = (String) session.getAttribute("userName");
+		Account account = (Account)session.getAttribute("account");
+		String userName = account.getUserName();
 		int myRanking = rankingLogic.myRanking(userName);
 
 		request.setAttribute("rankingList", rankingList);
