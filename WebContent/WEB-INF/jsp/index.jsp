@@ -11,12 +11,14 @@
 <body>
     <ul>
         <li class="button hvr-sweep-to-right"> ${account.userName}さん</li>
-        <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet"></a>ログアウト</li>
+        <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet">ログアウト</a></li>
     </ul><h1>Secure Life</h1>
-<p>説明</p>
+<p>インターネットを利用する際に注意すべきセキュリティ上の問題や、<br>情報系の時事問題を○×クイズ形式で学んでいくことができます。</p>
+    <div id="pochi">
 <form>
-    <input id="pochi" class="button hvr-grow" type="button" value="ゲームスタート" onclick="location.href='/Quiz2/GameServlet?action=start'">
-    <input id="pochi" class="button hvr-grow" type="button" value="ランキング" onclick="location.href='/Quiz2/RankingServlet'">
+    <input class="button hvr-grow" type="button" value="ゲームスタート" onclick="location.href='/Quiz2/GameServlet?action=start'">
+    <input class="button hvr-grow" type="button" value="ランキング" onclick="location.href='/Quiz2/RankingServlet'">
 </form>
+    </div>
 </body>
 </html>

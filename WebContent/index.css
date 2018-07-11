@@ -1,13 +1,18 @@
+style {
+    @import url('https://fonts.googleapis.com/css?family=Lora');
+}
 body {
     background: #2c3338;
     font-family: sans-serif;
     margin: 0px;
 }
-
 p {
     text-align: center;
+    color: aquamarine;
+    font-size: 30px;
+    animation-duration: 4s;
+    animation-name: RightToLeft;
 }
-
 ul {
     background-color: #9ec34b;
     overflow: hidden;
@@ -15,19 +20,15 @@ ul {
     padding: 0px;
     height: 40px;
 }
-
 ul li {
     display: inline-block;
     width: 7em;
     padding: 9px;
     margin: 0px;
-    background-color: #9ec34b;
     float: right;
     text-align: center;
 }
-
 #logout {}
-
 #logout::before,
 #logout::after {
     position: absolute;
@@ -35,7 +36,6 @@ ul li {
     display: block;
     content: '';
 }
-
 #logout,
 #logout::before,
 #logout::after {
@@ -45,20 +45,16 @@ ul li {
     -webkit-transition: all .3s;
     transition: all .3s;
 }
-
 #logout {
     border-right: 3px solid #FFF;
     border-left: 1px solid #FFF;
 }
-
 #logout:hover {
     background-color: #fff;
     border-color: #FFF;
     color: #59b1eb;
 }
-
 #name {}
-
 #name::before,
 #name::after {
     position: absolute;
@@ -66,7 +62,6 @@ ul li {
     display: block;
     content: '';
 }
-
 #name,
 #name::before,
 #name::after {
@@ -76,18 +71,15 @@ ul li {
     -webkit-transition: all .3s;
     transition: all .3s;
 }
-
 #name {
     border-right: 2px solid #FFF;
     border-left: 3px solid #FFF;
 }
-
 #name:hover {
     background-color: #fff;
     border-color: #FFF;
     color: #59b1eb;
 }
-
 #count {
     font-size: 2em;
     color: #FFF;
@@ -95,7 +87,6 @@ ul li {
     border-left: solid 5px #2093fc;
     text-align: left;
 }
-
 #level {
     font-size: 1.5em;
     color: #FFF;
@@ -110,7 +101,6 @@ ul li {
     border-top: solid 2px #9ec34b;
     border-bottom: solid 2px #9ec34b;
 }
-
 #question:before,
 #question:after {
     content: '';
@@ -121,45 +111,48 @@ ul li {
     height: calc(100% + 20px);
     background-color: #9ec34b;
 }
-
 #question:before {
     left: 10px;
 }
-
 #question:after {
     right: 10px;
 }
-
 .main {
     text-align: center
 }
-
 .button input {
     margin: 5px;
     padding: 2px 37px;
     font-size: 7em;
 }
-
-#maru input{
+#maru input {
     background-color: #FE2E9A;
     color: #FFF;
 }
-
-#batsu input{
+#batsu input {
     background-color: #0677de;
     color: #FFF;
 }
-.pochi{
-    padding: 0.3em 1em;
-    text-decoration: n display: inline-block;
-    padding: 0.5em 1em;
+#pochi {
+    text-align: center;
+}
+#pochi form .button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    background-color: #9ec34b;
+    font-size: 16px;
+    line-height: 52px;
+    color: #FFF;
     text-decoration: none;
-    color: #67c5ff;
-    border: double 4px #67c5ff;
-    border-radius: 3px;
-    color: #67c5ff;
-    border: solid 2px #67c5ff;
-    border-radius: 3px;
+    font-weight: bold;
+    border: 2px solid #9ec34b;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 2em;
 }
 @keyframes RightToLeft {
     0% {
@@ -171,11 +164,11 @@ ul li {
         transform: translateX(0);
     }
 }
-
 h1 {
     text-align: center;
     color: #ffffff;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-name: RightToLeft;
+    font-size: 65px;
+    font-family: 'Lora', serif;
 }
-

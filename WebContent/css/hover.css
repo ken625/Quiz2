@@ -1238,7 +1238,7 @@
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  background-color: #2098D1;
+    background-color: #2dcc5e;
   background-color: #2098d1;
   color: white;
 }
@@ -1264,7 +1264,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #2098D1;
+    background: #bcd08f;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -1305,7 +1305,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #2098D1;
+  background: #2dcc5e;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 100% 50%;
@@ -1346,7 +1346,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #2098D1;
+  background: #2dcc5e;
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 0;
@@ -2904,26 +2904,26 @@
 /* Icon Down */
 @-webkit-keyframes hvr-icon-down {
   0%,
-	50%,
-	100% {
+    50%,
+    100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   25%,
-	75% {
+    75% {
     -webkit-transform: translateY(6px);
     transform: translateY(6px);
   }
 }
 @keyframes hvr-icon-down {
   0%,
-	50%,
-	100% {
+    50%,
+    100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   25%,
-	75% {
+    75% {
     -webkit-transform: translateY(6px);
     transform: translateY(6px);
   }
@@ -2952,26 +2952,26 @@
 /* Icon Up */
 @-webkit-keyframes hvr-icon-up {
   0%,
-	50%,
-	100% {
+    50%,
+    100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   25%,
-	75% {
+    75% {
     -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
   }
 }
 @keyframes hvr-icon-up {
   0%,
-	50%,
-	100% {
+    50%,
+    100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   25%,
-	75% {
+    75% {
     -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
   }
@@ -3029,7 +3029,7 @@
     transform: translateY(-100%);
   }
   51%,
-	100% {
+    100% {
     opacity: 1;
   }
 }
@@ -3043,7 +3043,7 @@
     transform: translateY(-100%);
   }
   51%,
-	100% {
+    100% {
     opacity: 1;
   }
 }
