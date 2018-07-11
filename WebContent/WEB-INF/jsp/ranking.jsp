@@ -11,6 +11,7 @@ int myRanking = (int) request.getAttribute("myRanking");
 <html>
 <head>
 <link rel="stylesheet"  href="${pageContext.request.contextPath}/index.css">
+<link href="css/hover.css" rel="stylesheet" media="all">
 <meta charset="UTF-8">
 <title>ランキング</title>
 </head>
@@ -38,8 +39,8 @@ int myRanking = (int) request.getAttribute("myRanking");
             <% } %>
         </p>
     </div>
-    <div>
-        <button type="button" onclick="location.href='/Quiz2/ToIndexServlet'">トップへ</button>
+    <div id="pochi">
+        <button class="button hvr-grow" type="button" onclick="location.href='/Quiz2/ToIndexServlet'">トップへ</button>
     </div>
 </body>
 </html>
