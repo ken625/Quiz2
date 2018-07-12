@@ -10,12 +10,18 @@ int myRanking = (int) request.getAttribute("myRanking");
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet"  href="${pageContext.request.contextPath}/index.css">
+<link rel="stylesheet"  href="${pageContext.request.contextPath}/ranking.css">
 <link href="css/hover.css" rel="stylesheet" media="all">
 <meta charset="UTF-8">
 <title>ランキング</title>
 </head>
 <body>
+<div id="ranking">
+    <p><% if(myRanking == 0) {%>ランキングに登録されていません<%
+            }else { %>あなたの順位は<%= myRanking %>です<% } %>
+    </p>
+</div>
+<div id="ranking_table">
     <table border="1">
         <tr>
             <th>ランキング</th>
@@ -30,17 +36,9 @@ int myRanking = (int) request.getAttribute("myRanking");
             </tr>
         <% } %>
     </table>
-    <div id="ranking">
-        <p>
-            <% if(myRanking == 0) {%>
-            ランキングに登録されていません
-            <% } else { %>
-            あなたの順位は<%= myRanking %>です
-            <% } %>
-        </p>
     </div>
     <div id="pochi">
-        <button class="button hvr-grow" type="button" onclick="location.href='/Quiz2/ToIndexServlet'">トップへ</button>
+        <input class="button hvr-grow" type="button" value="トップへ" onclick="location.href='/Quiz2/ToIndexServlet'">
     </div>
 </body>
 </html>

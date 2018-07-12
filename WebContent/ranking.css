@@ -11,21 +11,20 @@
 body {
     background: #2c3338;
     font-family: sans-serif;
-    margin: 0px;
 }
 #pochi {
     text-align: center;
 }
 #pochi .button {
+    text-align: center;
     display: inline-block;
     vertical-align: middle;
     width: 180px;
     height: 50px;
-    text-align: center;
+    color: #FFF;
     background-color: #9ec34b;
     font-size: 16px;
     line-height: 52px;
-    color: #FFF;
     text-decoration: none;
     font-weight: bold;
     border: 2px solid #9ec34b;
@@ -35,9 +34,35 @@ body {
     margin: 2em;
 }
 #ranking p {
-        text-align: center;
-        color: aquamarine;
-        font-size: 10px;
-        animation-duration: 4s;
-        animation-name: RightToLeft;
-    }
+    text-align: center;
+    color: aquamarine;
+    font-size: 30px;
+    animation-duration: 4s;
+    animation-name: RightToLeft;
+}
+#ranking_table {
+    text-align: center;
+}
+table {
+    margin-left: auto;
+    margin-right: auto
+}
+#ranking_table tr,
+td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+}
+#ranking_table th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    background: #3f3f3f;
+    color: #ffffff;
+}
+#ranking_table td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+}
