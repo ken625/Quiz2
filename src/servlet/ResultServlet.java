@@ -25,6 +25,7 @@ public class ResultServlet extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		Account account = (Account)session.getAttribute("account");
+		System.out.println(account.getUserName());
 		String[] result = (String[])session.getAttribute("result");
 
 		// 正誤判定をスコアに換算(L1:5×3, L2:9×3, L3:13×3, L4:19×1 最大100点)
