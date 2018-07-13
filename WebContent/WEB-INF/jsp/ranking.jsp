@@ -18,21 +18,21 @@ int myRanking = (int) request.getAttribute("myRanking");
 <body>
 <div id="ranking">
     <p><% if(myRanking == 0) {%>ランキングに登録されていません<%
-            }else { %>あなたの順位は<%= myRanking %>です<% } %>
+            }else { %>あなたの順位は<%= myRanking %>位です<% } %>
     </p>
 </div>
 <div id="ranking_table">
     <table border="1">
         <tr>
-            <th>ランキング</th>
+            <th class="mugitya">ランキング</th>
             <th>ユーザー名</th>
-            <th>スコア</th>
+            <th class="ryokutya">スコア</th>
         </tr>
         <% for(int i = 0; i < rankingList.size(); i++) { %>
             <tr>
-                <td><%= rankingList.get(i).getRanking() %></td>
+                <td class="mugitya"><%= rankingList.get(i).getRanking() %>位</td>
                 <td><%= rankingList.get(i).getUserName() %></td>
-                <td><%= rankingList.get(i).getScore() %></td>
+                <td class="ryokutya"><%= rankingList.get(i).getScore() %></td>
             </tr>
         <% } %>
     </table>
