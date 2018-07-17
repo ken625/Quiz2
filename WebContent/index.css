@@ -7,12 +7,6 @@ body {
     font-family: sans-serif;
     margin: 0px;
 }
-.main1{
-    margin: auto;
-}
-.main2{
-    margin: auto;
-}
 p {
     text-align: center;
     color: aquamarine;
@@ -196,8 +190,8 @@ h1 {
     background-color: #FE2E9A;
     display: inline-block;
     border: none;
-    margin: 1em;
-    font-size: 2em;
+    margin-right: 30px;
+    font-size: 3em;
     border-radius: 3px;
     box-shadow: 0 1px #FE2E9A;
     top: 0;
@@ -214,8 +208,8 @@ h1 {
     background-color: #0677de;
     display: inline-block;
     border: none;
-    margin: 1em;
-    font-size: 2em;
+    margin-left: 30px;
+    font-size: 3em;
     border-radius: 3px;
     box-shadow: 0 1px #0677de;
     top: 0;
@@ -235,4 +229,7 @@ h1 {
     font-size: 180px;
     padding: 0px;
     margin: 0px;
+}
+.main2{
+    text-align: right;
 }

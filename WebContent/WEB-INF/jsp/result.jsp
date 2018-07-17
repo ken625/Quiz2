@@ -18,7 +18,7 @@
         <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet">ログアウト</a></li>
     </ul>
     <p>あなたのスコアは${score}点でした。</p>
-<table>
+<table cellspacing="0" border="1">
 <% for(int i = 0; i < 10; i++){%>
     <tr id=<%if(i % 2 == 0){%><%="gu"%><%;}else{%><%="ki"%><%;}%>>
         <td rowspan="2">Q<%=i + 1%></td>
