@@ -119,7 +119,7 @@ window.onload = function(){
     // 押されたボタンの判定
     function actionResultListener(check){
         if(check == 1){
-            result.textContent = "◎";
+            result.textContent = "○";
         }else{
             result.textContent = "×";
         }
