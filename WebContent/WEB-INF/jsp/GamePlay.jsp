@@ -4,7 +4,7 @@
 <html>
 <head>
 <link href="css/hover.css" rel="stylesheet" media="all">
-<link rel="stylesheet"  href="${pageContext.request.contextPath}/default.css">
+<link rel="stylesheet"  href="${pageContext.request.contextPath}/index.css">
 <meta charset="UTF-8">
 <title>ゲーム画面</title>
 </head>
@@ -16,19 +16,18 @@
 
 <p>Q<span id="span">1</span>/10</p>
 <p id="star"></p>
+<div id="ocha">
 <p id="question"></p>
-<p id="result"></p>
-<div class="main">
-   <p class="button hvr-grow" id="maru">
-     <button type="button" id="marubtn"  class="on" value="1">○</button>
-   </p>
-   <p class="button hvr-grow" id="batsu">
-     <button type="button"  id="batsubtn" class="on" value="0">×</button>
-   </p>
 </div>
-<p id="end"></p>
+<p id="result"></p>
+<div class="main1">
+     <button type="button" id="marubtn"  class="on" value="1">○</button>
+     <button type="button"  id="batsubtn" class="on" value="0">×</button>
+</div>
+<div class="main2">
 <button type="button" id="nextbtn" class="off" style="display:none;">次へ</button>
 <button type="button" id="resultbtn" class="off" style="display:none" onclick="location.href='/Quiz2/ResultServlet'">結果画面へ</button>
+</div>
 <script>
 window.onload = function(){
 

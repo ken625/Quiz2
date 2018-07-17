@@ -8,9 +8,33 @@
         transform: translateX(0);
     }
 }
+p {
+    text-align: center;
+    color: aquamarine;
+    font-size: 30px;
+    animation-duration: 4s;
+    animation-name: RightToLeft;
+}
+ul {
+    background-color: #9ec34b;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+}
+ul li {
+    display: inline-block;
+    width: 7em;
+    padding: 9px;
+    margin: 0px;
+    float: right;
+    text-align: center;
+}
 body {
+    text-align: center;
     background: #2c3338;
     font-family: sans-serif;
+    margin: 0px;
 }
 #pochi {
     text-align: center;
@@ -72,4 +96,14 @@ td {
 }
 #ranking_table .ryokutya{
     width: 120px;
+}
+#topbtn button {
+    padding: 15px 37px;
+    background-color: #9ec34b;
+    border: none;
+    margin: 1em;
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 0 1px #9ec34b;
+    top: 0;
 }
