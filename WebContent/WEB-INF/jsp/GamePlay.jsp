@@ -16,15 +16,18 @@
 
 <p>Q<span id="span">1</span>/10</p>
 <p id="star"></p>
-<div id="ocha">
 <p id="question"></p>
-</div>
 <p id="result"></p>
 <div class="main1">
+   <p class="button hvr-grow" id="maru">
      <button type="button" id="marubtn"  class="on" value="1">○</button>
+   </p>
+   <p class="button hvr-grow" id="batsu">
      <button type="button"  id="batsubtn" class="on" value="0">×</button>
+   </p>
 </div>
 <div class="main2">
+<p id="end"></p>
 <button type="button" id="nextbtn" class="off" style="display:none;">次へ</button>
 <button type="button" id="resultbtn" class="off" style="display:none" onclick="location.href='/Quiz2/ResultServlet'">結果画面へ</button>
 </div>
