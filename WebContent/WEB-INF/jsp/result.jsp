@@ -20,11 +20,11 @@
     <p>あなたのスコアは${score}点でした。</p>
 <table border="1">
 <% for(int i = 0; i < 10; i++){%>
-    <tr id=<%if(2 % i == 0){%><%="gu"%><%}else{%><%="ki"%><%}%>>
+    <tr id=<%if(2 % i == 0){%><%="gu"%><%;}else{%><%="ki"%><%;}%>>
         <td rowspan="2">Q<%=i + 1%></td>
         <td colspan="2"><%=questionList[i].getText()%></td>
     </tr>
-    <tr id=<%if(2 % i == 0){%><%="gu"%><%}else{%><%="ki"%><%}%>>
+    <tr id=<%if(2 % i == 0){%><%="gu"%><%;}else{%><%="ki"%><%;}%>>
         <td><%= result[i].equals("1") ? "○" : "×"%></td>
         <td><%= questionList[i].getComment()%></td>
     </tr>
