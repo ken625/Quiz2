@@ -17,7 +17,9 @@
 <p>Q<span id="span">1</span>/10</p>
 <p id="star"></p>
 <p id="question"></p>
+<div id="otin">
 <p id="result"></p>
+</div>
 <div class="main1">
    <p class="button hvr-grow" id="maru">
      <button type="button" id="marubtn"  class="on" value="1">○</button>
@@ -117,7 +119,7 @@ window.onload = function(){
     // 押されたボタンの判定
     function actionResultListener(check){
         if(check == 1){
-            result.textContent = "○";
+            result.textContent = "◎";
         }else{
             result.textContent = "×";
         }
