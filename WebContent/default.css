@@ -15,7 +15,8 @@ body {
     margin: 0;
 }
 h1 {
-    margin-bottom: 2em;
+    margin: 2em;
+    margin-bottom: 1em;
     text-align: center;
     color: #ffffff;
     animation-duration: 2s;
@@ -39,7 +40,7 @@ p {
 after { clear: both; }
 
 #login {
-    margin: 50px auto;
+    margin: auto;
     width: 320px;
 }
 
@@ -71,7 +72,7 @@ after { clear: both; }
     border-radius: 0px 3px 3px 0px;
     color: #a9a9a9;
     margin-bottom: 1em;
-    margin: 20px;
+    margin: 25px;
     padding: 0 16px;
     width: 235px;
     height: 50px;
@@ -82,7 +83,7 @@ after { clear: both; }
     border-radius: 0px 3px 3px 0px;
     color: #a9a9a9;
     margin-bottom: 1em;
-    margin: 20px;
+    margin: 25px;
     padding: 0 16px;
     width: 235px;
     height: 50px;
@@ -91,7 +92,7 @@ after { clear: both; }
     background-color: #9ec34b;
     border-radius: 0px 3px 3px 0px;
     color: #FFF;
-    margin: 1em;
+    margin: 5px 30px 5px 23px;
     width: 120px;
     height:50px;
     text-align: center;

@@ -227,7 +227,13 @@ h1 {
     padding: 0;
     margin: 0;
 }
-#otin #result {
+#otin #result .correct{
+    color: #9883f4;
+    font-size: 90px;
+    padding: 0px;
+    margin: 0px;
+}
+#otin #result .incorrect{
     color: #9883f4;
     font-size: 90px;
     padding: 0px;
