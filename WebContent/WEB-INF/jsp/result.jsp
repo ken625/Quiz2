@@ -33,5 +33,20 @@
 <div id="topbtn">
     <button class="button hvr-grow" type="button" onclick="location.href='/Quiz2/ToIndexServlet'">トップへ</button>
 </div>
+<script>
+window.onload = function(){
+
+	document.onkeydown = function(e){
+		e = (e)? e : window.event;
+		if(e.ctrlKey){
+		return false;
+		}
+	};
+
+	document.oncontextmenu = function(){
+	    return false;
+	};
+}
+</script>
 </body>
 </html>

@@ -36,6 +36,17 @@
 <script>
 window.onload = function(){
 
+	document.onkeydown = function(e){
+		e = (e)? e : window.event;
+		if(e.ctrlKey){
+		return false;
+		}
+	};
+
+	document.oncontextmenu = function(){
+	    return false;
+	};
+
     // 要素を取得
     let questionNum = 1;
     let dif;

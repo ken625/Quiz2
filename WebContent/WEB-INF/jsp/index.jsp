@@ -20,5 +20,20 @@
     <input class="button hvr-grow" type="button" value="ランキング" onclick="location.href='/Quiz2/RankingServlet'">
 </form>
     </div>
+<script>
+window.onload = function(){
+
+	document.onkeydown = function(e){
+		e = (e)? e : window.event;
+		if(e.ctrlKey){
+		return false;
+		}
+	};
+
+	document.oncontextmenu = function(){
+	    return false;
+	};
+}
+</script>
 </body>
 </html>
