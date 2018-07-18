@@ -7,7 +7,7 @@
 <title>ログイン</title>
 </head>
 <body>
-<h1>Secure Life</h1>
+<h1>&nbsp;Secure Life</h1>
 <div id="login">
 <form action="/Quiz2/LoginServlet" method="post">
 ユーザー名:<input type="text" name="userName"><br>
