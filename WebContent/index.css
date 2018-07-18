@@ -11,7 +11,7 @@ p {
     text-align: center;
     color: aquamarine;
     font-size: 30px;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-name: RightToLeft;
 }
 ul {
@@ -164,7 +164,7 @@ h1 {
     padding: 15px 37px;
     background-color: #9ec34b;
     border: none;
-    margin: 1em;
+    margin: 0 auto;
     font-size: 2em;
     border-radius: 3px;
     box-shadow: 0 1px #9ec34b;
@@ -174,7 +174,7 @@ h1 {
     padding: 15px 37px;
     background-color: #9ec34b;
     border: none;
-    margin: 1em;
+    margin: 0 auto;
     font-size: 2em;
     border-radius: 3px;
     box-shadow: 0 1px #9ec34b;
@@ -184,7 +184,7 @@ h1 {
     text-align: center;
 }
 .main1 #marubtn {
-    animation-duration: 4s;
+    animation-duration: 1.5s;
     animation-name: RightToLeft;
     padding: 15px 37px;
     background-color: #FE2E9A;
@@ -202,7 +202,7 @@ h1 {
     box-shadow: 5px 5px #ff79bf;
 }
 .main1 #batsubtn {
-    animation-duration: 4s;
+    animation-duration: 1.5s;
     animation-name: RightToLeft;
     padding: 15px 37px;
     background-color: #0677de;
@@ -226,10 +226,7 @@ h1 {
 #otin #result {
     font-weight: 900;
     color: #9883f4;
-    font-size: 180px;
+    font-size: 90px;
     padding: 0px;
     margin: 0px;
-}
-.main2{
-    text-align: right;
 }
