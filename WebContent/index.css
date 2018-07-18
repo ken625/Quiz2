@@ -2,6 +2,7 @@ style {
     @import url('https://fonts.googleapis.com/css?family=Lora');
 }
 body {
+    text-align: center;
     background: #2c3338;
     font-family: sans-serif;
     margin: 0px;
@@ -10,7 +11,7 @@ p {
     text-align: center;
     color: aquamarine;
     font-size: 30px;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-name: RightToLeft;
 }
 ul {
@@ -94,7 +95,9 @@ ul li {
     text-align: left;
 }
 #question {
-    margin: 0em 20em 0em 20em;
+    text-align: center;
+    display:inline-block;
+    margin:auto;
     color: #FFF;
     position: relative;
     padding: 1em 1em;
@@ -116,22 +119,6 @@ ul li {
 }
 #question:after {
     right: 10px;
-}
-.main {
-    text-align: center
-}
-.button input {
-    margin: 5px;
-    padding: 2px 37px;
-    font-size: 7em;
-}
-#maru input {
-    background-color: #FE2E9A;
-    color: #FFF;
-}
-#batsu input {
-    background-color: #0677de;
-    color: #FFF;
 }
 #pochi {
     text-align: center;
@@ -171,4 +158,75 @@ h1 {
     animation-name: RightToLeft;
     font-size: 65px;
     font-family: 'Lora', serif;
+}
+
+.main2 #nextbtn {
+    padding: 15px 37px;
+    background-color: #9ec34b;
+    border: none;
+    margin: 0 auto;
+    font-size: 2em;
+    border-radius: 3px;
+    box-shadow: 0 1px #9ec34b;
+    top: 0;
+}
+.main2 #resultbtn {
+    padding: 15px 37px;
+    background-color: #9ec34b;
+    border: none;
+    margin: 0 auto;
+    font-size: 2em;
+    border-radius: 3px;
+    box-shadow: 0 1px #9ec34b;
+    top: 0;
+}
+#ocha{
+    text-align: center;
+}
+.main1 #marubtn {
+    animation-duration: 1.5s;
+    animation-name: RightToLeft;
+    padding: 15px 37px;
+    background-color: #FE2E9A;
+    display: inline-block;
+    border: none;
+    margin-right: 30px;
+    font-size: 3em;
+    border-radius: 3px;
+    box-shadow: 0 1px #FE2E9A;
+    top: 0;
+    transition: .2s all;
+}
+.main1 #marubtn:hover {
+    top: -3px;
+    box-shadow: 5px 5px #ff79bf;
+}
+.main1 #batsubtn {
+    animation-duration: 1.5s;
+    animation-name: RightToLeft;
+    padding: 15px 37px;
+    background-color: #0677de;
+    display: inline-block;
+    border: none;
+    margin-left: 30px;
+    font-size: 3em;
+    border-radius: 3px;
+    box-shadow: 0 1px #0677de;
+    top: 0;
+    transition: .2s all;
+}
+.main1 #batsubtn:hover {
+    top: -3px;
+    box-shadow: 5px 5px #4f95d4;
+}
+#otin{
+    padding: 0;
+    margin: 0;
+}
+#otin #result {
+    font-weight: 900;
+    color: #9883f4;
+    font-size: 90px;
+    padding: 0px;
+    margin: 0px;
 }

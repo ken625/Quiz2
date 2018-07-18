@@ -7,13 +7,14 @@
 <title>ログイン</title>
 </head>
 <body>
-    <div id="login">
+<h1>Secure Life</h1>
+<div id="login">
 <form action="/Quiz2/LoginServlet" method="post">
 ユーザー名:<input type="text" name="userName"><br>
 パスワード:<input type="password" name="pass"><br>
 <input type="submit" value="ログイン">
 <input type="button" value="新規登録" onclick="location.href='/Quiz2/EntryServlet'">
 </form>
-    </div>
+</div>
 </body>
 </html>

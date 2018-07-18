@@ -4,7 +4,7 @@
 <html>
 <head>
 <link href="css/hover.css" rel="stylesheet" media="all">
-<link rel="stylesheet"  href="${pageContext.request.contextPath}/default.css">
+<link rel="stylesheet"  href="${pageContext.request.contextPath}/index.css">
 <meta charset="UTF-8">
 <title>ゲーム画面</title>
 </head>
@@ -17,8 +17,10 @@
 <p>Q<span id="span">1</span>/10</p>
 <p id="star"></p>
 <p id="question"></p>
+<div id="otin">
 <p id="result"></p>
-<div class="main">
+</div>
+<div class="main1">
    <p class="button hvr-grow" id="maru">
      <button type="button" id="marubtn"  class="on" value="1">○</button>
    </p>
@@ -26,9 +28,11 @@
      <button type="button"  id="batsubtn" class="on" value="0">×</button>
    </p>
 </div>
+<div class="main2">
 <p id="end"></p>
 <button type="button" id="nextbtn" class="off" style="display:none;">次へ</button>
 <button type="button" id="resultbtn" class="off" style="display:none" onclick="location.href='/Quiz2/ResultServlet'">結果画面へ</button>
+</div>
 <script>
 window.onload = function(){
 
@@ -109,15 +113,15 @@ window.onload = function(){
         console.log(questionNum);
         req.open("GET","/Quiz2/CheckAnswerServlet?answer="+this.value + "&questionNum="+questionNum);
         req.setRequestHeader('Content-Type', 'application/x-www-form-urlencorded');
-        req.send(null);
+        req.send(null)
     }
 
     // 押されたボタンの判定
     function actionResultListener(check){
         if(check == 1){
-            result.textContent = "○";
+            result.textContent = "正解";
         }else{
-            result.textContent = "×";
+            result.textContent = "不正解";
         }
     }
 
