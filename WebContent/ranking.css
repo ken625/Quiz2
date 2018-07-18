@@ -68,8 +68,8 @@ body {
     text-align: center;
 }
 table {
-    margin-left: auto;
-    margin-right: auto
+    margin: 0 auto;
+    padding: 0 auto;
 }
 #ranking_table tr,
 td {
@@ -108,7 +108,11 @@ td {
     top: 0;
 }
 #gu td{
+    font-size: 30px;
     color: #ffffff;
+    margin-bottom: 10px;
+
 }
 #ki td{
+    font-size: 30px;
 }
