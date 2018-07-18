@@ -119,9 +119,9 @@ window.onload = function(){
     // 押されたボタンの判定
     function actionResultListener(check){
         if(check == 1){
-            result.textContent = "正解";
+            result.textContent = "正解!!";
         }else{
-            result.textContent = "不正解";
+            result.textContent = "不正解...";
         }
     }
 
