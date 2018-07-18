@@ -164,7 +164,7 @@ h1 {
     padding: 15px 37px;
     background-color: #9ec34b;
     border: none;
-    margin: 1em;
+    margin: 0 auto;
     font-size: 2em;
     border-radius: 3px;
     box-shadow: 0 1px #9ec34b;
@@ -226,10 +226,7 @@ h1 {
 #otin #result {
     font-weight: 900;
     color: #9883f4;
-    font-size: 180px;
+    font-size: 90px;
     padding: 0px;
     margin: 0px;
-}
-.main2{
-    text-align: right;
 }

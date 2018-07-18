@@ -113,15 +113,15 @@ window.onload = function(){
         console.log(questionNum);
         req.open("GET","/Quiz2/CheckAnswerServlet?answer="+this.value + "&questionNum="+questionNum);
         req.setRequestHeader('Content-Type', 'application/x-www-form-urlencorded');
-        req.send(null);
+        req.send(null)
     }
 
     // 押されたボタンの判定
     function actionResultListener(check){
         if(check == 1){
-            result.textContent = "○";
+            result.textContent = "正解";
         }else{
-            result.textContent = "×";
+            result.textContent = "不正解";
         }
     }
 
