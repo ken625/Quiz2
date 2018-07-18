@@ -24,10 +24,10 @@ public class GameDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test" + STR, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://118.27.2.80/QUIZ" + STR, "tama", "tamao");
 
 			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-			String sql = "SELECT * FROM QUIZ";
+			String sql = "SELECT * FROM quiz";
 			ResultSet rs = stmt.executeQuery(sql);
 
 			while(rs.next()){
