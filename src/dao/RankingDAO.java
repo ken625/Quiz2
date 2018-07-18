@@ -22,7 +22,7 @@ public class RankingDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test" + STR, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://118.27.2.80/QUIZ" + STR, "tama", "tamao");
 
 			//データの取得(SELECT)
 			String sql = "SELECT USER_NAME, SCORE, RANK() OVER (ORDER BY SCORE DESC) AS RANKING FROM ACCOUNT "

@@ -23,7 +23,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test" + STR, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://118.27.2.80/QUIZ" + STR, "tama", "tamao");
 
 			//データの取得(SELECT)
 			String sql = "SELECT USER_NAME, PASS, SCORE FROM ACCOUNT WHERE USER_NAME = ? AND PASS = ?";
@@ -67,7 +67,7 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test" + STR, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://118.27.2.80/QUIZ" + STR, "tama", "tamao");
 
 			//レコード追加用のSQL文(INSERT)
 			String sql = "INSERT INTO ACCOUNT(USER_NAME, PASS) VALUES(?, ?)";
@@ -109,10 +109,10 @@ public class AccountDAO {
 		//データベースに接続
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test" + STR, "root", "root");
+			conn = DriverManager.getConnection("jdbc:mysql://118.27.2.80/QUIZ" + STR, "tama", "tamao");
 
 			//レコード追加用のSQL文(INSERT)
-			String sql = "UPDATE ACCOUNT SET SCORE = ? WHERE USER_NAME = ? AND COALESCE(SCORE = ?,0) <= COALESCE(NULL,0)";
+			String sql = "UPDATE ACCOUNT SET SCORE = ? WHERE USER_NAME = ? AND  COALESCE(SCORE,0) <= ?";
 			//SQLの送信
 			PreparedStatement pSmt = conn.prepareStatement(sql);
 			//レコード追加用のSQL文(INSERT)
