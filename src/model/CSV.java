@@ -15,9 +15,9 @@ import java.util.List;
 
 public class CSV {
 
-	private static final String CSV = "mondai.csv";
-	private static final String SQL = "mondai.sql";
-	private static final String TABLE = "hoge";
+	private static final String CSV = "c:/Users/aaaaaaaa/Documents/csv/SecureLifeQuestionList.csv";
+	private static final String SQL = "c:/Users/aaaaaaaa/Documents/QSql.sql";
+	private static final String TABLE = "QUIZ";
 	private static final String COLUMN1 = "TEXT";
 	private static final String COLUMN2 = "ANSWER";
 	private static final String COLUMN3 = "LEVEL";
@@ -193,7 +193,7 @@ public class CSV {
 			tmp.append("(\'")
 			   .append(data.get(i)[0] == null ? "null" : data.get(i)[0].replace("\\", "\\\\").replace("\'", "\'\'").replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n"))
 			   .append("\',")
-			   .append(data.get(i)[1] == MARU ? MARU_NUM : BATSU_NUM)
+			   .append(data.get(i)[1].equals(MARU) ? MARU_NUM : BATSU_NUM)
 			   .append(",")
 			   .append(data.get(i)[2])
 			   .append(",\'")

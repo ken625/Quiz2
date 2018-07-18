@@ -112,7 +112,7 @@ public class AccountDAO {
 			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test" + STR, "root", "root");
 
 			//レコード追加用のSQL文(INSERT)
-			String sql = "UPDATE ACCOUNT SET SCORE = ? WHERE USER_NAME = ? AND COALESCE(SCORE = ?,0) <= COALESCE(NULL,0)";
+			String sql = "UPDATE ACCOUNT SET SCORE = ? WHERE USER_NAME = ? AND  COALESCE(SCORE,0) <= ?";
 			//SQLの送信
 			PreparedStatement pSmt = conn.prepareStatement(sql);
 			//レコード追加用のSQL文(INSERT)
