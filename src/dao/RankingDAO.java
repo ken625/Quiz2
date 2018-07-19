@@ -26,7 +26,7 @@ public class RankingDAO {
 
 			//データの取得(SELECT)
 			String sql = "SELECT USER_NAME, SCORE, RANK() OVER (ORDER BY SCORE DESC) AS RANKING FROM ACCOUNT "
-					+ "WHERE SCORE IS NOT NULL";
+					+ "WHERE SCORE IS NOT NULL ORDER BY RANKING";
 			//SQLの送信
 			PreparedStatement pSmt = conn.prepareStatement(sql);
 
