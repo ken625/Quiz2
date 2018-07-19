@@ -11,9 +11,10 @@
 body {
     background: #2c3338;
     color: #606468;
-    font: 87.5%/1.5em 'Open Sans', sans-serif;
+    font: 87.5% 'Open Sans', sans-serif;
     margin: 0;
 }
+
 h1 {
     margin: 2em;
     margin-bottom: 1em;
@@ -25,6 +26,7 @@ h1 {
     font-size: 70px;
     font-family: 'Lora', serif;
 }
+
 input {
     border: none;
     font-family: 'Open Sans', Arial, sans-serif;
@@ -214,4 +216,7 @@ after { clear: both; }
 
 div.center {
     text-align: center;
+}
+#space {
+	margin: 120px;
 }

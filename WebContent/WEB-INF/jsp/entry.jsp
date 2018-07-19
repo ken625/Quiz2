@@ -7,7 +7,8 @@
     <title>新規登録</title>
 </head>
 <body>
-    <div id="login">
+	<div id="space"></div>
+	    <div id="login">
         <form action="/Quiz2/EntryServlet" method="post">
             新しいユーザー名:
             <div class="center">
@@ -21,6 +22,7 @@
                 <input type="submit" value="作成" id="new_submit">
             </div>
         </form>
+        <button type="button" onclick="location.href='/Quiz2/LoginServlet'"style="width: 365px; height: 30px;">戻る</button>
     </div>
 <script>
 window.onload = function(){

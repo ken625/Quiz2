@@ -9,13 +9,13 @@
 <body>
 <h1>&nbsp;Secure Life</h1>
 <div id="login">
-<form action="/Quiz2/LoginServlet" method="post">
-ユーザー名:<input type="text" name="userName"><br>
-パスワード:<input type="password" name="pass"><br>
-<input type="submit" value="ログイン">
-<input type="button" value="新規登録" onclick="location.href='/Quiz2/EntryServlet'">
-</form>
-</div>
+	<form action="/Quiz2/LoginServlet" method="post">
+		ユーザー名:<input type="text" name="userName"><br>
+		パスワード:<input type="password" name="pass"><br>
+		<input type="submit" value="ログイン">
+		<input type="button" value="新規登録" onclick="location.href='/Quiz2/EntryServlet'">
+	</form>
+</div><br><br>
 <script>
 window.onload = function(){
 
