@@ -20,7 +20,7 @@
     <p id="dispResult">あなたのスコアは<strong id="scoreTen">${score}点</strong>でした。</p>
 
 <% for(int i = 0; i < 10; i++){%>
-<div class="qContents">
+<div class="<%=i != 9 ? "qContents_c":"qContents_l"%>">
 	<p>Q<%=i + 1%>：
 		<span class="<%=result[i].equals("1") ? "seikai" : "fuseikai"%>">
 		<%= result[i].equals("1") ? "正解" : "不正解"%></span>

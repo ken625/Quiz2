@@ -122,21 +122,37 @@ td {
 	color: #ff0080;
 }
 
-.qContents  {
+.qContents_c  {
     background-color: #424242;
-    border: solid 3px #424242;/*線*/
-    border-radius: 10px;/*角の丸み*/
+    border: solid 3px #424242;
+    border-radius: 10px;
 	width: 65%;
 	margin-left: auto;
 	margin-right: 250px;
 	margin-bottom: 100px;
 
 }
-.qContents p {
+.qContents_c p {
 	text-align: left;
 	text-indent: -3em;
 	margin-left: 100px;
 }
+
+.qContents_l  {
+    background-color: #424242;
+    border: solid 3px #424242;
+    border-radius: 10px;
+	width: 65%;
+	margin-left: auto;
+	margin-right: 250px;
+	margin-bottom: 50px;
+}
+.qContents_l p {
+	text-align: left;
+	text-indent: -3em;
+	margin-left: 100px;
+}
+
 .qTexts {
 
 }
