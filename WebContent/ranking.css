@@ -8,6 +8,10 @@
         transform: translateX(0);
     }
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 p {
     text-align: center;
     color: aquamarine;

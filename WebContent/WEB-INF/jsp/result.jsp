@@ -14,7 +14,7 @@
 </head>
 <body>
     <ul>
-        <li class="button hvr-sweep-to-right"> ${account.userName}さん</li>
+        <li>${account.userName}さん</li>
         <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet">ログアウト</a></li>
     </ul>
     <p id="dispResult">あなたのスコアは<strong id="scoreTen">${score}点</strong>でした。</p>
@@ -37,16 +37,16 @@
 <script>
 window.onload = function(){
 
-	document.onkeydown = function(e){
-		e = (e)? e : window.event;
-		if(e.ctrlKey){
-		return false;
-		}
-	};
+    document.onkeydown = function(e){
+        e = (e)? e : window.event;
+        if(e.ctrlKey){
+        return false;
+        }
+    };
 
-	document.oncontextmenu = function(){
-	    return false;
-	};
+    document.oncontextmenu = function(){
+        return false;
+    };
 }
 </script>
 </body>
