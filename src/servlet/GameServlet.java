@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Account;
 import model.GameData;
 import model.GetGameDataLogic;
 
@@ -21,7 +22,8 @@ public class GameServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		if(session == null) {
+		Account account = (Account)session.getAttribute("account");
+		if(account == null) {
 			response.sendRedirect("/Quiz2/LoginServlet");
 		}else{
 

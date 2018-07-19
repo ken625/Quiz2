@@ -24,10 +24,10 @@ public class ResultServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		HttpSession session = request.getSession();
-		if(session == null) {
+		Account account = (Account)session.getAttribute("account");
+		if(account == null) {
 			response.sendRedirect("/Quiz2/LoginServlet");
 		}else{
-			Account account = (Account)session.getAttribute("account");
 			String[] result = (String[])session.getAttribute("result");
 
 			// 正誤判定をスコアに換算(L1:5×3, L2:9×3, L3:13×3, L4:19×1 最大100点)

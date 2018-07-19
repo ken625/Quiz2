@@ -22,14 +22,14 @@ public class RankingServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		HttpSession session = request.getSession();
-		if(session == null) {
+		Account account = (Account)session.getAttribute("account");
+		if(account == null) {
 			response.sendRedirect("/Quiz2/LoginServlet");
 		}else{
 
 			RankingLogic rankingLogic = new RankingLogic();
 			List<Account> rankingList = rankingLogic.topRanking();
 
-			Account account = (Account)session.getAttribute("account");
 			String userName = account.getUserName();
 			int myRanking = rankingLogic.myRanking(userName);
 
