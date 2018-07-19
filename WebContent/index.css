@@ -14,6 +14,10 @@ p {
     animation-duration: 2s;
     animation-name: RightToLeft;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 ul {
     background-color: #9ec34b;
     overflow: hidden;
@@ -178,11 +182,9 @@ h1 {
     padding: 15px 37px;
     background-color: #9ec34b;
     border: none;
-    margin: 0 auto;
+    margin: 50px auto 80px auto;
     font-size: 2em;
-    border-radius: 3px;
     box-shadow: 0 1px #9ec34b;
-    top: 0;
 }
 #ocha{
     text-align: center;

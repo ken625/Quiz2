@@ -10,7 +10,7 @@
 </head>
 <body>
     <ul>
-        <li class="button hvr-sweep-to-right"> ${account.userName}さん</li>
+        <li>${account.userName}さん</li>
         <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet">ログアウト</a></li>
     </ul><h1>Secure Life</h1>
 <p>インターネットを利用する際に注意すべきセキュリティ上の問題や、<br>情報系の時事問題を○×クイズ形式で学んでいくことができます。</p>
@@ -23,16 +23,16 @@
 <script>
 window.onload = function(){
 
-	document.onkeydown = function(e){
-		e = (e)? e : window.event;
-		if(e.ctrlKey){
-		return false;
-		}
-	};
+    document.onkeydown = function(e){
+        e = (e)? e : window.event;
+        if(e.ctrlKey){
+        return false;
+        }
+    };
 
-	document.oncontextmenu = function(){
-	    return false;
-	};
+    document.oncontextmenu = function(){
+        return false;
+    };
 }
 </script>
 </body>
