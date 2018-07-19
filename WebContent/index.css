@@ -229,6 +229,13 @@ h1 {
     padding: 0;
     margin: 0;
 }
+#otin #result{
+    font-size: 65px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding: 0;
+}
+/*正解不正解の色を分ける際に使う
 #otin #result .correct{
     color: #9883f4;
     font-size: 90px;
@@ -241,3 +248,4 @@ h1 {
     padding: 0px;
     margin: 0px;
 }
+*/
