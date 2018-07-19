@@ -13,7 +13,7 @@
         <li>${account.userName}さん</li>
         <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet">ログアウト</a></li>
     </ul><h1>Secure Life</h1>
-<p>インターネットを利用する際に注意すべきセキュリティ上の問題や、<br>情報系の時事問題を○×クイズ形式で学んでいくことができます。</p>
+<p>インターネットを利用する際に注意すべきセキュリティ上の問題や、<br>情報に関する時事問題を○×クイズ形式で学んでいくことができます。</p>
     <div id="pochi">
 <form>
     <input class="button hvr-grow" type="button" value="ゲームスタート" onclick="location.href='/Quiz2/GameServlet?action=start'">
