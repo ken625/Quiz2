@@ -25,7 +25,7 @@
         <td colspan="2"><%=questionList[i].getText()%></td>
     </tr>
     <tr class=<%if(i % 2 == 0){%><%="gu"%><%;}else{%><%="ki"%><%;}%>>
-        <td><%= result[i].equals("1") ? "○" : "×"%></td>
+        <td><%= result[i].equals("1") ? "正解" : "不正解"%></td>
         <td><%= questionList[i].getComment()%></td>
     </tr>
 <%} %>

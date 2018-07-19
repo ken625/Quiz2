@@ -22,19 +22,22 @@ public class RankingServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		HttpSession session = request.getSession();
+		if(session == null) {
+			response.sendRedirect("/Quiz2/LoginServlet");
+		}else{
 
-		RankingLogic rankingLogic = new RankingLogic();
-		List<Account> rankingList = rankingLogic.topRanking();
+			RankingLogic rankingLogic = new RankingLogic();
+			List<Account> rankingList = rankingLogic.topRanking();
 
-		Account account = (Account)session.getAttribute("account");
-		String userName = account.getUserName();
-		int myRanking = rankingLogic.myRanking(userName);
+			Account account = (Account)session.getAttribute("account");
+			String userName = account.getUserName();
+			int myRanking = rankingLogic.myRanking(userName);
 
-		request.setAttribute("rankingList", rankingList);
-		request.setAttribute("myRanking", myRanking);
+			request.setAttribute("rankingList", rankingList);
+			request.setAttribute("myRanking", myRanking);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/ranking.jsp");
-		dispatcher.forward(request, response);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/ranking.jsp");
+			dispatcher.forward(request, response);
+		}
 	}
-
 }

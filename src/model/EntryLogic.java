@@ -9,7 +9,7 @@ public class EntryLogic {
 		String pass = NewAccount.getPass();
 
 		//名前とパスワードのどちらかが空白の場合falseを返す(リダイレクト)
-		if(name.isEmpty() || pass.isEmpty()){
+		if(name.isEmpty() || pass.isEmpty() || name.equals("") || pass.equals("")){
 			boolean result = false;
 			return result;
 		}else{
