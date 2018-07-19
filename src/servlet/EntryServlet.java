@@ -31,6 +31,7 @@ public class EntryServlet extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 		String userName = request.getParameter("userName");
+		System.out.println(userName);
 		String pass = request.getParameter("pass");
 
 		//入力情報をBOに渡す

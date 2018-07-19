@@ -1256,6 +1256,7 @@
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
+
 .hvr-sweep-to-right:before {
   content: "";
   position: absolute;
