@@ -6,7 +6,7 @@ public class NewAccount {
 
 	public NewAccount(String userName, String pass){
 		HashPass hp = new HashPass();
-		this.userName = userName;
+		this.userName = userName.replace("<","&lt").replace(">", "&gt");
 		this.pass = hp.encodePassdigiest(pass);
 	}
 	public String getUserName(){return userName;}

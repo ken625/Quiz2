@@ -17,6 +17,7 @@ body {
 h1 {
     margin: 2em;
     margin-bottom: 1em;
+    padding-left: 30px;
     text-align: center;
     color: #ffffff;
     animation-duration: 2s;

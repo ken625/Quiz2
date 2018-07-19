@@ -25,13 +25,13 @@ int myRanking = (int) request.getAttribute("myRanking");
     <table border="1">
         <tr>
             <th class="mugitya">ランキング</th>
-            <th>ユーザー名</th>
+            <th class="urontya">ユーザー名</th>
             <th class="ryokutya">スコア</th>
         </tr>
         <% for(int i = 0; i < rankingList.size(); i++) { %>
             <tr>
                 <td class="mugitya"><%= rankingList.get(i).getRanking() %>位</td>
-                <td><%= rankingList.get(i).getUserName() %></td>
+                <td class="urontya"><%= rankingList.get(i).getUserName() %></td>
                 <td class="ryokutya"><%= rankingList.get(i).getScore() %></td>
             </tr>
         <% } %>

@@ -14,8 +14,8 @@
 </head>
 <body>
     <ul>
-        <li>${account.userName}さん</li>
         <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet">ログアウト</a></li>
+        <li>${account.userName}さん</li>
     </ul>
     <p id="dispResult">あなたのスコアは<strong id="scoreTen">${score}点</strong>でした。</p>
 

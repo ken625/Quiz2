@@ -10,8 +10,8 @@
 </head>
 <body>
     <ul>
-        <li>${account.userName}さん</li>
         <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet">ログアウト</a></li>
+        <li>${account.userName}さん</li>
     </ul>
 
 <p>Q<span id="span">1</span>/10</p>

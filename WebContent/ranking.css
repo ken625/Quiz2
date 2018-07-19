@@ -28,8 +28,7 @@ ul {
 }
 ul li {
     display: inline-block;
-    width: 7em;
-    padding: 9px;
+    padding: 9px 15px;
     margin: 0px;
     float: right;
     text-align: center;
@@ -97,6 +96,9 @@ td {
 }
 #ranking_table .mugitya {
     width: 90px;
+}
+#ranking_table .urontya {
+	width: 320px;
 }
 #ranking_table .ryokutya{
     width: 120px;
