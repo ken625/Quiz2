@@ -17,19 +17,20 @@
         <li class="button hvr-sweep-to-right"> ${account.userName}さん</li>
         <li class="button hvr-sweep-to-right"><a href="/Quiz2/LoginServlet">ログアウト</a></li>
     </ul>
-    <p>あなたのスコアは${score}点でした。</p>
-<table cellspacing="0" border="1">
+    <p id="dispResult">あなたのスコアは<strong id="scoreTen">${score}点</strong>でした。</p>
+
 <% for(int i = 0; i < 10; i++){%>
-    <tr class=<%if(i % 2 == 0){%><%="gu"%><%;}else{%><%="ki"%><%;}%>>
-        <td rowspan="2">Q<%=i + 1%></td>
-        <td colspan="2"><%=questionList[i].getText()%></td>
-    </tr>
-    <tr class=<%if(i % 2 == 0){%><%="gu"%><%;}else{%><%="ki"%><%;}%>>
-        <td><%= result[i].equals("1") ? "正解" : "不正解"%></td>
-        <td><%= questionList[i].getComment()%></td>
-    </tr>
+<div class="qContents">
+	<p>Q<%=i + 1%>：
+		<span class="<%=result[i].equals("1") ? "seikai" : "fuseikai"%>">
+		<%= result[i].equals("1") ? "正解" : "不正解"%></span>
+	</p>
+	<p>問題：
+	<span class="qTexts"><%=questionList[i].getText()%></span></p>
+	<p>解説：
+	<span class="qTexts"><%= questionList[i].getComment()%></span></p>
+</div>
 <%} %>
-</table>
 <div id="topbtn">
     <button class="button hvr-grow" type="button" onclick="location.href='/Quiz2/ToIndexServlet'">トップへ</button>
 </div>
