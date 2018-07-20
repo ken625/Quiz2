@@ -12,12 +12,13 @@ body {
     background: #2c3338;
     color: #606468;
     font: 87.5% 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 h1 {
     margin: 2em;
     margin-bottom: 1em;
-    padding-right: 28px;
+    padding-left: 30px;
     text-align: center;
     color: #ffffff;
     animation-duration: 2s;
@@ -42,9 +43,8 @@ p {
 after { clear: both; }
 
 #login {
-    margin: 0px 40px 0px 614px;
+    margin: auto;
     width: 320px;
-    padding:0;
 }
 
 #login form {
